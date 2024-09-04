@@ -1,9 +1,9 @@
 import { FC, PropsWithChildren } from "react";
-import { Roboto } from "next/font/google";
+import { fontRoboto } from "@/public/fonts";
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/styles/globals.css";
 
-const fontRoboto = Roboto({ weight: ["300", "400", "500", "700"], subsets: ["latin"] });
+import { MainLayout } from "@/components";
 
 export const metadata: Metadata = {
   title: "Material UI Exercise App",
@@ -13,7 +13,9 @@ export const metadata: Metadata = {
 const RootLayout: FC<Readonly<PropsWithChildren>> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={fontRoboto.className}>{children}</body>
+      <body className={fontRoboto.className}>
+        <MainLayout>{children}</MainLayout>
+      </body>
     </html>
   );
 };
