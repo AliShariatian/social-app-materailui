@@ -1,6 +1,7 @@
 import { FC } from "react";
-import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Switch } from "@mui/material";
+import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import { AccountBox, Article, Home, ModeNight, People, Person, Settings, Storefront } from "@mui/icons-material";
+import { ThemeSwitchButton } from "@/components";
 
 const Sidebar: FC = (): JSX.Element => {
   return (
@@ -24,7 +25,7 @@ const Sidebar: FC = (): JSX.Element => {
               <ListItemIcon>
                 <ModeNight />
               </ListItemIcon>
-              <Switch />
+              <ThemeSwitchButton />
             </ListItemButton>
           </ListItem>
         </List>
